@@ -13,6 +13,9 @@
 		B594F6AE27FEA7460097BBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B594F6AD27FEA7460097BBB8 /* Assets.xcassets */; };
 		B594F6B127FEA7460097BBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B594F6AF27FEA7460097BBB8 /* LaunchScreen.storyboard */; };
 		B594F6C327FEAD360097BBB8 /* StatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B594F6C227FEAD360097BBB8 /* StatusLabel.swift */; };
+		B59B954728034C28003DAEB7 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954628034C28003DAEB7 /* UIStackViewExtensions.swift */; };
+		B59B954928034C94003DAEB7 /* MailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954828034C94003DAEB7 /* MailTextField.swift */; };
+		B59B954B28034E78003DAEB7 /* VerificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954A28034E78003DAEB7 /* VerificationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		B594F6B027FEA7460097BBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B594F6B227FEA7460097BBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B594F6C227FEAD360097BBB8 /* StatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
+		B59B954628034C28003DAEB7 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
+		B59B954828034C94003DAEB7 /* MailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailTextField.swift; sourceTree = "<group>"; };
+		B59B954A28034E78003DAEB7 /* VerificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		B594F6A327FEA7440097BBB8 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				B59B954428034C09003DAEB7 /* Extensions */,
 				B594F6BA27FEA82C0097BBB8 /* Application */,
 				B594F6BB27FEA8360097BBB8 /* Models */,
 				B594F6BC27FEA83F0097BBB8 /* Controllers */,
@@ -92,8 +99,9 @@
 		B594F6BD27FEA8460097BBB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B594F6AF27FEA7460097BBB8 /* LaunchScreen.storyboard */,
 				B594F6C227FEAD360097BBB8 /* StatusLabel.swift */,
+				B59B954828034C94003DAEB7 /* MailTextField.swift */,
+				B59B954A28034E78003DAEB7 /* VerificationButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,11 +109,28 @@
 		B594F6BE27FEA84E0097BBB8 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				B594F6AF27FEA7460097BBB8 /* LaunchScreen.storyboard */,
 				B594F6A227FEA7440097BBB8 /* Products */,
 				B594F6AD27FEA7460097BBB8 /* Assets.xcassets */,
 				B594F6B227FEA7460097BBB8 /* Info.plist */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		B59B954428034C09003DAEB7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B59B954528034C16003DAEB7 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B59B954528034C16003DAEB7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B59B954628034C28003DAEB7 /* UIStackViewExtensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59B954728034C28003DAEB7 /* UIStackViewExtensions.swift in Sources */,
+				B59B954B28034E78003DAEB7 /* VerificationButton.swift in Sources */,
 				B594F6C327FEAD360097BBB8 /* StatusLabel.swift in Sources */,
+				B59B954928034C94003DAEB7 /* MailTextField.swift in Sources */,
 				B594F6A927FEA7440097BBB8 /* VerificationViewController.swift in Sources */,
 				B594F6A527FEA7440097BBB8 /* AppDelegate.swift in Sources */,
 				B594F6A727FEA7440097BBB8 /* SceneDelegate.swift in Sources */,

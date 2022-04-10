@@ -16,6 +16,8 @@ class VerificationViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    private let statusLabel = StatusLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class VerificationViewController: UIViewController {
     
     private func setupViews() {
         view.addSubview(backgroundImageView)
+        view.addSubview(statusLabel)
     }
     
     private func setDelegates() {
@@ -43,5 +46,12 @@ extension VerificationViewController {
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            statusLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
+            statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+        ])
+
     }
 }

@@ -12,6 +12,8 @@ class StatusLabel: UILabel  {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        configure()
     }
 
     required init?(coder: NSCoder) {
@@ -20,8 +22,9 @@ class StatusLabel: UILabel  {
     
     private func configure() {
         text = "Check ur mail"
-        textColor = #colorLiteral(red: 0.717387421, green: 0.4762157365, blue: 0.09534761139, alpha: 1)
+        textColor = #colorLiteral(red: 0.9450980392, green: 0.9333333333, blue: 0.862745098, alpha: 1)
         font = UIFont(name: "Apple SD Gothic Neo", size: 16)
+        adjustsFontSizeToFitWidth = true
         translatesAutoresizingMaskIntoConstraints = false
     }
     
