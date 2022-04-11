@@ -16,6 +16,8 @@
 		B59B954728034C28003DAEB7 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954628034C28003DAEB7 /* UIStackViewExtensions.swift */; };
 		B59B954928034C94003DAEB7 /* MailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954828034C94003DAEB7 /* MailTextField.swift */; };
 		B59B954B28034E78003DAEB7 /* VerificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954A28034E78003DAEB7 /* VerificationButton.swift */; };
+		B59B954D2804219D003DAEB7 /* MailsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954C2804219D003DAEB7 /* MailsCollectionView.swift */; };
+		B59B954F28042228003DAEB7 /* MailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B954E28042228003DAEB7 /* MailCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B59B954628034C28003DAEB7 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		B59B954828034C94003DAEB7 /* MailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailTextField.swift; sourceTree = "<group>"; };
 		B59B954A28034E78003DAEB7 /* VerificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationButton.swift; sourceTree = "<group>"; };
+		B59B954C2804219D003DAEB7 /* MailsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailsCollectionView.swift; sourceTree = "<group>"; };
+		B59B954E28042228003DAEB7 /* MailCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,8 @@
 		B594F6BD27FEA8460097BBB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B594F6C227FEAD360097BBB8 /* StatusLabel.swift */,
-				B59B954828034C94003DAEB7 /* MailTextField.swift */,
-				B59B954A28034E78003DAEB7 /* VerificationButton.swift */,
+				B59B9551280423AE003DAEB7 /* VerificationVC */,
+				B59B95502804239A003DAEB7 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +134,25 @@
 				B59B954628034C28003DAEB7 /* UIStackViewExtensions.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B59B95502804239A003DAEB7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B59B954E28042228003DAEB7 /* MailCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B59B9551280423AE003DAEB7 /* VerificationVC */ = {
+			isa = PBXGroup;
+			children = (
+				B594F6C227FEAD360097BBB8 /* StatusLabel.swift */,
+				B59B954828034C94003DAEB7 /* MailTextField.swift */,
+				B59B954A28034E78003DAEB7 /* VerificationButton.swift */,
+				B59B954C2804219D003DAEB7 /* MailsCollectionView.swift */,
+			);
+			path = VerificationVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59B954728034C28003DAEB7 /* UIStackViewExtensions.swift in Sources */,
+				B59B954D2804219D003DAEB7 /* MailsCollectionView.swift in Sources */,
 				B59B954B28034E78003DAEB7 /* VerificationButton.swift in Sources */,
 				B594F6C327FEAD360097BBB8 /* StatusLabel.swift in Sources */,
+				B59B954F28042228003DAEB7 /* MailCollectionCell.swift in Sources */,
 				B59B954928034C94003DAEB7 /* MailTextField.swift in Sources */,
 				B594F6A927FEA7440097BBB8 /* VerificationViewController.swift in Sources */,
 				B594F6A527FEA7440097BBB8 /* AppDelegate.swift in Sources */,
