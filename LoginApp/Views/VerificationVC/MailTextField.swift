@@ -32,17 +32,18 @@ class MailTextField: UITextField {
         backgroundColor = .white
         borderStyle = .none
         layer.cornerRadius = 10
-        textColor = #colorLiteral(red: 0.2156862745, green: 0.2156862745, blue: 0.2156862745, alpha: 1)
+        textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         leftView = UIView(frame: CGRect(x: 0,
                                         y: 0,
                                         width: 15,
                                         height: self.frame.height))
+        
         leftViewMode = .always
-        clearButtonMode = .always
         returnKeyType = .done
-        placeholder = "Enter mail..."
-        font = UIFont(name: "Apple SD Gothic Neo", size: 22)
-        tintColor = #colorLiteral(red: 0.5019607843, green: 0.5019607843, blue: 0.5019607843, alpha: 1)
+        clearButtonMode = .always
+        font = UIFont(name: "Apple SD Gothic Neo", size: 20)
+        placeholder = "Enter email here..."
+        tintColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

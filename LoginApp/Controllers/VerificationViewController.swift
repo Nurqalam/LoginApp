@@ -11,7 +11,7 @@ class VerificationViewController: UIViewController {
     
     private let backgroundImageView: UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(named: "backStone")
+        imageView.image = UIImage(named: "bubbles")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -65,18 +65,18 @@ class VerificationViewController: UIViewController {
 
 extension VerificationViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        verificationModel.filteredMailArray.count
+        verificationModel.filteredMailsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IdCell.idMailCell.rawValue,
-                                                            for: indexPath) as? MailCollectionCell
+                                                            for: indexPath) as? MailCollectionViewCell
         else {
             return UICollectionViewCell()
         }
         
-        let mailLabelText = verificationModel.filteredMailArray[indexPath.row]
-        cell.cellConfigure(mailLabelText: mailLabelText)
+        let mailLabelText = verificationModel.filteredMailsArray[indexPath.row]
+        cell.cellConfigure(mailTextName: mailLabelText)
         return cell
     }
 }
@@ -87,13 +87,13 @@ extension VerificationViewController: UICollectionViewDataSource {
 extension VerificationViewController: SelectProposedMailProtocol {
     func selectProposedMail(indexPath: IndexPath) {
         guard let text = mailTextField.text else { return }
-        verificationModel.getMailName(text: text)
-        let domainMail = verificationModel.filteredMailArray[indexPath.row]
+        verificationModel.getNameMail(text: text)
+        let domainMail = verificationModel.filteredMailsArray[indexPath.row]
         let mailFullName = verificationModel.nameMail + domainMail
         mailTextField.text = mailFullName
         statusLabel.isValid = mailFullName.isValid()
         verificationButton.isValid = mailFullName.isValid()
-        verificationModel.filteredMailArray = []
+        verificationModel.filteredMailsArray = []
         collectionView.reloadData()
     }
     
@@ -105,14 +105,14 @@ extension VerificationViewController: ActionsgMailTextFieldProtocol {
     func typingText(text: String) {
         statusLabel.isValid = text.isValid()
         verificationButton.isValid = text.isValid()
-        verificationModel.getFilteredMail(text: text)
+        verificationModel.getFilteredMails(text: text)
         collectionView.reloadData()
     }
     
     func cleanOutTextField() {
         statusLabel.setDefaultSetting()
         verificationButton.setDefaultSetting()
-        verificationModel.filteredMailArray = []
+        verificationModel.filteredMailsArray = []
         collectionView.reloadData()
     }
     
@@ -120,28 +120,26 @@ extension VerificationViewController: ActionsgMailTextFieldProtocol {
 }
 
 //MARK: - setConstraints
-
 extension VerificationViewController {
-    
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            backgroundImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([
             statusLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
-            statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            statusLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
         
         NSLayoutConstraint.activate([
             mailTextField.heightAnchor.constraint(equalToConstant: 50),
-            stackView.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 2),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            stackView.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 15),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)
         ])
-
     }
 }

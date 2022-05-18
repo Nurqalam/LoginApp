@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 
 
-class MailCollectionCell: UICollectionViewCell {
+class MailCollectionViewCell: UICollectionViewCell {
     
     private let domainLabel: UILabel = {
        let label = UILabel()
-        label.font = UIFont(name: "Apple SD Gothic Neo", size: 16)
+        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.font = UIFont(name: "Apple SD Gothic Neo", size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -37,17 +38,12 @@ class MailCollectionCell: UICollectionViewCell {
         addSubview(domainLabel)
     }
     
-    private func configure(mailLabelText: String) {
-        domainLabel.text = mailLabelText
-    }
-    
-    public func cellConfigure(mailLabelText: String) {
-        configure(mailLabelText: mailLabelText)
+    public func cellConfigure(mailTextName: String) {
+        domainLabel.text = mailTextName
     }
 }
 
-extension MailCollectionCell {
-    
+extension MailCollectionViewCell {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             domainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),

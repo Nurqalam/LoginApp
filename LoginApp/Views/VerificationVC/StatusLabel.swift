@@ -31,21 +31,21 @@ class StatusLabel: UILabel  {
     }
     
     private func configure() {
-        text = "Check ur mail"
-        textColor = #colorLiteral(red: 0.9450980392, green: 0.9333333333, blue: 0.862745098, alpha: 1)
-        font = UIFont(name: "Apple SD Gothic Neo", size: 16)
-        adjustsFontSizeToFitWidth = true
+        text = "Check ur email status"
+        textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        font = UIFont(name: "Apple SD Gothic Neo", size: 18)
         translatesAutoresizingMaskIntoConstraints = false
+        adjustsFontSizeToFitWidth = true
     }
 
     private func setNotValidSetting() {
         text = "Mail is not valid. Example: name@domain.ru"
-        textColor = #colorLiteral(red: 0.5215686275, green: 0.1098039216, blue: 0.05098039216, alpha: 1)
+        textColor = #colorLiteral(red: 0.9418043095, green: 0.2004035299, blue: 0.09429308964, alpha: 1)
     }
     
     private func setValidSetting() {
         text = "Mail is valid."
-        textColor = #colorLiteral(red: 0.1960784314, green: 0.3411764706, blue: 0.1019607843, alpha: 1)
+        textColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
     }
 
     public func setDefaultSetting() {

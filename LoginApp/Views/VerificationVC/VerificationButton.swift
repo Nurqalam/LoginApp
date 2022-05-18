@@ -33,12 +33,12 @@ class VerificationButton: UIButton {
     }
     
     private func configure() {
-        backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9333333333, blue: 0.862745098, alpha: 1)
-        setTitle("Verification Button", for: .normal)
-        let color = #colorLiteral(red: 0.2156862745, green: 0.2156862745, blue: 0.2156862745, alpha: 1)
-        setTitleColor(color, for: .normal)
+        backgroundColor = .white
         layer.cornerRadius = 10
-        titleLabel?.font = UIFont(name: "Avenir Book", size: 17)
+        setTitle("Verification", for: .normal)
+        let color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        setTitleColor(color, for: .normal)
+        titleLabel?.font = UIFont(name: "Avenir Book", size: 21)
         isEnabled = false
         alpha = 0.5
         translatesAutoresizingMaskIntoConstraints = false

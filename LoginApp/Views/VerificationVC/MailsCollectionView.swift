@@ -24,7 +24,8 @@ class MailsCollectionView: UICollectionView {
         super.init(frame: frame, collectionViewLayout: layout)
         
         configure()
-        register(MailCollectionCell.self, forCellWithReuseIdentifier: IdCell.idMailCell.rawValue)
+        register(MailCollectionViewCell.self, forCellWithReuseIdentifier: IdCell.idMailCell.rawValue)
+        delegate = self
     }
     
     
@@ -36,7 +37,6 @@ class MailsCollectionView: UICollectionView {
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .none
-        delegate = self
     }
 }
 
